@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import ListaDeMensagens from './componets/ListaDeMensagens';
+import EntradaDeMensagem from './componets/EntradaDeMensagem';
+import Style from './Style/App.module.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [mensagens, setMensagens] = useState([]);
+
+  const handleEnviar = (remetente, conteudo) => {
+    const novaMensagem = {
+      remetente,
+      conteudo,
+    };
+    setMensagens([...mensagens, novaMensagem]);
+  };
+
+  const handleDeletar = (index) => {
+    const mensagensAtualizadas = [...mensagens];
+    mensagensAtualizadas.splice(index, 1);
+    setMensagens(mensagensAtualizadas);
+  };
+return (
+    <div className={Style.app}>
+      <ListaDeMensagens mensagens={mensagens} onDelete={handleDeletar} />
+      <EntradaDeMensagem onEnviar={handleEnviar} />
     </div>
   );
 }

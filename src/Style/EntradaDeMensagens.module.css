@@ -1,0 +1,45 @@
+
+/* Estilo do campo de entrada de mensagem */
+.entrada {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .entradaRemetente {
+    background-color: #2A3942;
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 2px;
+  }
+  .entradaMensagem {
+    background-color: #2A3942;
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .button {
+    width: 40px;
+    height: 40px;
+    background-color: #00bfa5;
+    color: #fff;
+    border: none;
+    border-radius: 360px;
+    padding: 8px 15px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Estilo do botão de envio ao passar o mouse */
+  .button:hover {
+    background-color: #009c88; /* Cor do botão de envio ao passar o mouse */
+  }
