@@ -35,9 +35,11 @@ const EntradaDeMensagem = ({ onEnviar }) => {
         placeholder="Digite sua mensagem"
         value={conteudo}
         onChange={(e) => setConteudo(e.target.value)}
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyPress}
       />
-      <button className={Style.button} onClick={handleEnviar}></button>
+      <button className={Style.button} onClick={handleEnviar}>
+        <i className="fa-solid fa-paper-plane"></i>
+      </button>
     </div>
   );
 };

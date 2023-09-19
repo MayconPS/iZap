@@ -4,9 +4,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #fff;
+    background-color: transparent;
     padding: 10px;
-    border-top: 1px solid #ccc;
   }
   
   .entradaRemetente {
@@ -17,7 +16,10 @@
     border-radius: 5px;
     outline: none;
     width: 2px;
+    color: #fff;
+    font-size: medium;
   }
+
   .entradaMensagem {
     background-color: #2A3942;
     flex-grow: 1;
@@ -25,6 +27,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+    color: #fff;
+    font-size: medium;
   }
   
   .button {
@@ -34,9 +38,9 @@
     color: #fff;
     border: none;
     border-radius: 360px;
-    padding: 8px 15px;
     cursor: pointer;
     outline: none;
+    align-items: center;
   }
   
   /* Estilo do botão de envio ao passar o mouse */

@@ -5,12 +5,22 @@
     word-wrap: break-word;
   }
   .mensagemDireita {
-    align-self: flex-end;
-    background-color: #dcf8c6; /* Cor de fundo das suas mensagens */
-    color: #000; /* Cor do texto das suas mensagens */
+    display: flex;
+    gap: 30px;
+    align-self: end;
+    background-color: #005C4B; 
+    color: #fff; 
+    font-size: medium;
   }
   .mensagemEsquerda {
-    align-self: flex-start;
-    background-color: #fff; /* Cor de fundo das mensagens recebidas */
-    color: #000; /* Cor do texto das mensagens recebidas */
+    display: flex;
+    gap: 30px;
+    align-self: start;
+    background-color: #202C33; 
+    color: #ffff; 
+    font-size: medium;
+  }
+  .conteudoMensagem{
+    display: flex;
+    flex-direction: column;
   }

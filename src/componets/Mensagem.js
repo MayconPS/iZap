@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Style from '../Style/Mensagem.module.css';
 
 const Mensagem = ({ remetente, conteudo, onDelete }) => {
-  const [clickCount, setClickCount] = useState(0);
+
+ 
 
   const handleDelete = () => {
     onDelete();
   };
 
   let mensagemClasse = '';
-  if (remetente.trim() === '') {
-    // Se o remetente estiver vazio, mensagem à direita
+  if (remetente.trim() === 'eu') {
+
     mensagemClasse = `${Style.mensagem} ${Style.mensagemDireita}`;
   } else {
-    // Se o remetente estiver preenchido, mensagem à esquerda
+
     mensagemClasse = `${Style.mensagem} ${Style.mensagemEsquerda}`;
   }
 
@@ -22,11 +23,11 @@ const Mensagem = ({ remetente, conteudo, onDelete }) => {
       onDoubleClick={handleDelete}
       className={mensagemClasse}
     >
-      {remetente !== 'eu' && <strong>{remetente}: </strong>}
+      <div className={Style.conteudoMensagem}>
+      {remetente !== 'eu' && <strong>{remetente} </strong>}
       {conteudo}
-      <span className="botao-deletar" onClick={handleDelete}>
-        &#10060;
-      </span>
+      </div>
+      
     </div>
   );
 };
