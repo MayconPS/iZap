@@ -10,7 +10,7 @@ const EntradaDeMensagem = ({ onEnviar }) => {
     const remetenteFinal = remetente.trim() === "" ? "eu" : remetente;
     if (conteudo.trim() !== "") {
       onEnviar(remetenteFinal, conteudo);
-      setRemetente("");
+      //setRemetente("");
       setConteudo("");
     }
   };
