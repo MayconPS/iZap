@@ -28,8 +28,5 @@ Este é um aplicativo de mensagens simples construído com React. Ele permite qu
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-## Link do Sruge
-
-ruthless-lock.surge.sh
-
-https://github.com/MayconPS/iZap.git
+## Link do Surge
+[https://ruthless-lock.surge.sh]
